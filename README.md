@@ -1,7 +1,7 @@
 The provided code is a simple Todo application built using React.This application provides a user-friendly interface for managing tasks, including adding, deleting, editing, rendering and filtering todos based on their status.It leverages React's component-based architecture and state management capabilities to create a responsive and interactive user experience.
 
 # LIVE LINK
-
+https://65c78bf2b9545376460413e8--velvety-kelpie-19edb2.netlify.app/
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
