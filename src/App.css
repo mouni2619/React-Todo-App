@@ -1,38 +1,199 @@
-.App {
-  text-align: center;
+/* Styling for headings */
+.filterhead {
+  font-weight: 600;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.para {
+  font-weight: 600;
+}
+/* Styling for the todo input form */
+.todolist {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+/* Styling for input fields */
+.maininp {
+  width: 300px;
+  font-size: 16px;
+  border: 2px solid rgb(24, 152, 101);
+  border-radius: 5px;
+}
+/* Styling for the main header */
+.mainhead {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  font-size: 16px;
+  color: rgb(24, 152, 101);
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.addtodobutton {
+  background-color: rgb(24, 152, 101);
+}
+/* Styling for the container of labels and filters */
+.labellist {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 30px 0px 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-card {
+
+  padding: 10px;
+  background-color: rgb(188, 235, 208);
+  width: 250px;
+}
+/* Styling for text within todo cards */
+.cardfont {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.lastbuttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+/* Ensures long descriptions wrap correctly */
+.cardfont {
+  word-wrap: break-word;
+  max-width: 100%;
+}
+/* Styling for edit mode buttons within todo cards */
+.edittwobuttons {
+  padding-top: 15px;
+  display: flex;
+  gap: 1rem;
+}
+
+.submit {
+  color: aliceblue;
+  border-radius: 5px;
+  border: 0px;
+  background-color: rgb(24, 152, 101);
+
+}
+
+.cancel {
+  color: aliceblue;
+  border-radius: 5px;
+  border: 0px;
+  background-color: rgb(197, 77, 33);
+}
+
+.edit-mode {
+  font-size: 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+}
+
+.todo-list {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin-left: 80px;
+  margin-right: 10px;
+}
+/* Media queries for responsiveness */
+@media screen and (max-width:1200px) {
+  .todo-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+@media screen and (max-width:768px) {
+  .todo-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+@media screen and (max-width:576px) {
+  .todo-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+}
+@media screen and (max-width:576px) {
+  .todolist {
+
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.all {
+  background-color: #EE959E;
+  border-radius: 2px;
+  color: aliceblue;
+  border: 0px;
+
+}
+
+.Completed {
+
+  color: aliceblue;
+  font-size: 15px;
+  border: 0px;
+}
+
+.com {
+  margin-left: 12px;
+}
+
+.Not-Completed {
+  border: 0px;
+  color: aliceblue;
+}
+
+.addtodobutton {
+  background-color: rgb(24, 152, 101);
+}
+
+.editbutton {
+  background-color: rgb(24, 152, 101);
+  color: aliceblue;
+  border-radius: 5px;
+  border: 0px;
+}
+
+.deletebutton {
+  color: aliceblue;
+  background-color: rgb(197, 77, 33);
+  border-radius: 5px;
+
+  border: 0px;
 }
