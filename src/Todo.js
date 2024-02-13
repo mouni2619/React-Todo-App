@@ -21,6 +21,7 @@ function Todo({
           {/* If current todo is being edited, render edit mode */}
           {editTodo && editTodo.id === todo.id ? (
             <div className="edit-mode">
+              <h6 style={{textAlign:"center", color:"red", textDecoration:"underline"}}>EDIT DATA</h6>
               <label htmlFor="editedTaskName">Name:</label>
               {/* Input field to edit task name */}
               <input
