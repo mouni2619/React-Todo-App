@@ -6,7 +6,10 @@ import TodoList from "./TodoList"
 
 function App() {
   // State variables
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    const storedTodos  = localStorage.getItem("todos");
+    return storedTodos  ? JSON.parse(storedTodos ) : [];
+  });
   const [taskName, setTaskName] = useState('');
   const [description, setDescription] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
@@ -14,6 +17,24 @@ function App() {
   const [editedTaskName, setEditedTaskName] = useState('');
   const [editedDescription, setEditedDescription] = useState('');
 
+  // Save todos to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
+
+
+  useEffect(() => {
+    if (todos.length === 0) {
+      // If there are no todos, add default todos
+      const defaultTodos = [
+        { id: 1, taskName: 'Default Todo 1', description: 'This is the first default todo', completed: false },
+        { id: 2, taskName: 'Default Todo 2', description: 'This is the second default todo', completed: false },
+        { id: 3, taskName: 'Default Todo 3', description: 'This is the third default todo', completed: false }
+      ];
+      setTodos(defaultTodos);
+    }
+  }, [todos]);
+  
   // Function to add a new todo
   const addTodo = () => {
     if (taskName.trim() !== '') {
